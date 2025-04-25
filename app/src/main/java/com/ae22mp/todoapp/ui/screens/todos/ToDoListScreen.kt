@@ -313,8 +313,7 @@ fun ToDoCard(todo: ToDo, viewModel: ToDoViewModel, onCheckChange: (Boolean) -> U
             )
         }
         if (!showDatePicker.value) {
-            val datePickerState =
-                rememberDatePickerState(initialSelectedDateMillis = todo.finishDate)
+            val datePickerState = rememberDatePickerState(initialSelectedDateMillis = todo.finishDate)
             DatePickerDialog(
                 onDismissRequest = { showDatePicker.value = true },
                 confirmButton = {
